@@ -10,31 +10,28 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2OR-Unit-6-04/sw.js", {
+    scope: "/ICS2OR-Unit-6-04/",
   })
 }
 
+;("use strict")
 /**
  * This function displays an alert.
  * Math
  */
-function calculate() {
+window.onload = function () {
+  const params = new URLSearchParams(document.location.search)
+
   // input
-  const a = parseInt(document.getElementById("textbox-a").value)
-  const b = parseInt(document.getElementById("textbox-b").value)
-  const c = parseInt(document.getElementById("textbox-c").value)
+  const radius = params.get("r")
+  console.log(radius)
 
   // process
-  const math = a + b + c
-  // output
-  document.getElementById("math").innerHTML = "Numbers: " + math + " units"
-}
+  const volume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3)
+  const dimensions = "<ul>\n<li>r = " + radius + "</li>\n</ul>"
 
-/**
- * This function displays an alert.
- * Words
- */
-function button() {
-  document.getElementById("words").innerHTML = "<p>Hello, World!</p>"
+  // output
+  document.getElementById("dimension").innerHTML = dimensions
+  document.getElementById("volume").innerHTML = "The volume is: " + volume + " cm²!"
 }
