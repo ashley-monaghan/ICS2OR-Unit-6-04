@@ -13,9 +13,8 @@ if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS2OR-Unit-6-04/sw.js", {
     scope: "/ICS2OR-Unit-6-04/",
   })
-}
+};
 
-;("use strict")
 /**
  * This function displays an alert.
  * Math
@@ -34,5 +33,5 @@ window.onload = function () {
   // output
   document.getElementById("dimension").innerHTML = dimensions
   document.getElementById("volume").innerHTML =
-    "The volume is: " + volume + " cm³!"
+    "The volume is: " + volume.toString(0.00) + " cm³!"
 }
