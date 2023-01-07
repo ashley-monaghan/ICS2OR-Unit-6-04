@@ -13,7 +13,7 @@ if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS2OR-Unit-6-04/sw.js", {
     scope: "/ICS2OR-Unit-6-04/",
   })
-};
+}
 
 /**
  * This function displays an alert.
@@ -33,5 +33,5 @@ window.onload = function () {
   // output
   document.getElementById("dimension").innerHTML = dimensions
   document.getElementById("volume").innerHTML =
-    "The volume is: " + volume.toString(0.00) + " cm³!"
+    "The volume is: " + volume.toString(0.0) + " cm³!"
 }
