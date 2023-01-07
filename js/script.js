@@ -33,5 +33,5 @@ window.onload = function () {
   // output
   document.getElementById("dimension").innerHTML = dimensions
   document.getElementById("volume").innerHTML =
-    "The volume is: " + volume.toString(0.0) + " cm³!"
+    "The volume is: " + volume.toFixed(2) + " cm³!"
 }
